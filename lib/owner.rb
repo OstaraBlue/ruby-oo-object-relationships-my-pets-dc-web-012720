@@ -11,7 +11,7 @@ class Owner
 
 
 
-  def initialize(name)
+  def initialize(name="Unknown")
     @name = name
     @species = "human"
 
