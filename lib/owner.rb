@@ -29,11 +29,9 @@ class Owner
   end
 
   def cats
-    # call Cat class and get ".all method"
+    # call Cat class and get ".all method" from cat.rb
     Cat.all.select do |cat|
-      if cat.owner == self
-        cat
-      end
+      cat.owner == self
     end
   end
 
@@ -41,9 +39,7 @@ class Owner
     # call Dog class and get ".all method"
   
     array = Dog.all.select do |dog|
-      if dog.owner == self
-        dog
-      end
+      dog.owner == self
     end
   end
 
@@ -98,6 +94,7 @@ class Owner
 
   def self.count
    @@count 
+   # or self.all.count
   end
 
   def self.reset_all
