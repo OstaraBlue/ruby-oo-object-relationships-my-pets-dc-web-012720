@@ -1,8 +1,6 @@
-require_relative "./owner.rb"
 
 class Cat
   # code goes here
-
   @@all = []
 
   attr_reader :name
