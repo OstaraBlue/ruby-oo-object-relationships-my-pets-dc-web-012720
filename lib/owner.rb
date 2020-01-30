@@ -89,7 +89,7 @@ class Owner
     end
 
   #
-  # class methods
+  # class methods --> calls on ALL instances of a class
   #
 
   def self.all
