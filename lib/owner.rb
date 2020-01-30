@@ -44,16 +44,11 @@ class Owner
   end
 
   def buy_cat(cat_name)
-    Cat.all.find do |cat|
-      Cat.new(cat_name, self)
-    end
+    Cat.new(cat_name, self)
   end
 
   def buy_dog(dog_name)
-    Dog.all.find do |dog|
-      Dog.new(dog_name, self)
-
-    end
+    Dog.new(dog_name, self)
   end
 
   def walk_dogs
