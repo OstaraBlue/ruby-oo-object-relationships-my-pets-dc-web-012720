@@ -23,9 +23,6 @@ class Owner
   # instance methods
   #
 
-  # def name
-  #   @name
-  # end
 
   def say_species
     return "I am a #{@species}."
@@ -63,22 +60,6 @@ class Owner
     end
   end
 
-  #
-  # class methods
-  #
-
-  def self.all
-    @@all
-  end
-
-  def self.count
-   @@count 
-  end
-
-  def self.reset_all
-    @@all.clear
-    @@count = 0 
-  end
   def walk_dogs
     self.dogs.each do |dog|
       dog.mood = "happy"
@@ -100,10 +81,28 @@ class Owner
       cat.mood = "nervous"
       cat.owner = nil
     end
+  end
+
   
     def list_pets
-
-    return "I have #{self.dogs.count} dog(s), and #{self.cats.count} cat(s)."
+      return "I have #{self.dogs.count} dog(s), and #{self.cats.count} cat(s)."
     end
+
+  #
+  # class methods
+  #
+
+  def self.all
+    @@all
   end
+
+  def self.count
+   @@count 
+  end
+
+  def self.reset_all
+    @@all.clear
+    @@count = 0 
+  end
+
 end
